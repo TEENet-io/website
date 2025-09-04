@@ -32,76 +32,80 @@ export default function Home() {
   return (
     <div className="bg-white">
       {/* Navigation */}
-      <nav className="fixed top-0 z-50 w-full border-b border-gray-200 bg-white/80 backdrop-blur-xl">
+      <nav className="relative">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex h-16 items-center justify-between">
-            <div className="flex items-center">
-              <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
-                TEENet
-              </span>
+          <div className="relative flex h-16 justify-between">
+            <div className="flex">
+              <div className="flex flex-shrink-0 items-center">
+                <span className="text-xl font-bold text-blue-600">
+                  TEENet
+                </span>
+              </div>
+              <div className="hidden sm:ml-8 sm:flex sm:space-x-8">
+                <a href="#features" className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">
+                  Features
+                </a>
+                <a href="#how-it-works" className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">
+                  How it Works
+                </a>
+                <a href="#faq" className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">
+                  FAQ
+                </a>
+              </div>
             </div>
-            <div className="hidden md:flex items-center space-x-8">
-              <a href="#features" className="text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors">
-                Features
-              </a>
-              <a href="#how-it-works" className="text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors">
-                How It Works
-              </a>
-              <a href="#security" className="text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors">
-                Security
-              </a>
-              <a href="#faq" className="text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors">
-                FAQ
-              </a>
-              <a href="#" className="text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors">
-                Docs
-              </a>
-              <a href="https://github.com/TEENet-io/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors">
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                  <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" />
-                </svg>
-                GitHub
-              </a>
-              <button className="ml-8 inline-flex items-center justify-center rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">
+            <div className="flex items-center">
+              <a href="#" className="rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700">
                 Get Started
-              </button>
+              </a>
             </div>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <div className="relative isolate pt-14">
-        <div className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
-          <div className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#0ea5e9] to-[#6366f1] opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" />
-        </div>
-        
-        <div className="py-24 sm:py-32 lg:pb-40">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto max-w-3xl text-center">
+      <div className="relative bg-white overflow-hidden">
+        <div className="pb-80 pt-16 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-40">
+          <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
+            <div className="sm:max-w-lg">
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-                Trustless Off-Chain Execution with{' '}
-                <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
-                  Built-In Private Key Security
-                </span>
+                Trustless Off-Chain Execution with Built‑In Private Key Security
               </h1>
-              <p className="mt-6 text-lg leading-8 text-gray-600">
+              <p className="mt-4 text-xl text-gray-500">
                 A trustless TEE-powered off-chain execution layer with built-in key management, purpose-built for decentralized applications.
               </p>
-              <div className="mt-10 flex items-center justify-center gap-x-6">
-                <a href="#" className="rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">
-                  Get Started
+            </div>
+            <div className="mt-10">
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a
+                  href="#"
+                  className="inline-flex items-center justify-center rounded-md bg-blue-600 px-6 py-3 text-base font-medium text-white hover:bg-blue-700"
+                >
+                  Get Started (SDK + Portal)
+                  <svg className="ml-2 -mr-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
                 </a>
-                <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-                  Read Documentation <span aria-hidden="true">→</span>
+                <a
+                  href="#"
+                  className="inline-flex items-center justify-center rounded-md border border-gray-300 bg-white px-6 py-3 text-base font-medium text-gray-700 hover:bg-gray-50"
+                >
+                  View Architecture / Read Docs
                 </a>
               </div>
             </div>
+
+            {/* Hero image/illustration area */}
+            <div className="absolute inset-y-0 right-0 w-full max-w-none sm:right-1/2 sm:max-w-3xl lg:right-0 lg:max-w-none">
+              <div className="h-full w-full bg-gradient-to-br from-blue-100 to-indigo-200 opacity-20 sm:h-72 md:h-96 lg:h-full lg:w-full">
+                <div className="flex h-full items-center justify-center">
+                  <div className="text-center">
+                    <div className="mx-auto h-32 w-32 rounded-full bg-blue-500 opacity-60"></div>
+                    <p className="mt-4 text-sm text-blue-600 font-medium">TEE Network Visualization</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        
-        <div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
-          <div className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#0ea5e9] to-[#6366f1] opacity-20 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" />
         </div>
       </div>
 
@@ -111,9 +115,6 @@ export default function Home() {
           <h2 className="text-base font-semibold leading-7 text-blue-600">The Problem</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Off-Chain Signing Stacks Are a Persistent Security Liability
-          </p>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-            The real blocker isn&apos;t just centralization—it&apos;s unverified, mutable, and easily compromised off-chain execution environments handling critical keys.
           </p>
         </div>
         
@@ -164,13 +165,10 @@ export default function Home() {
             <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Trustless Off-Chain Computation + Native Threshold Key Management
             </p>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              TEENet is an attestation-gated mesh of TEEs where signing-intensive logic executes redundantly and scales horizontally. A pipelined enclave scheduler + parallel threshold MPC paths allow clusters to sustain 500+ TPS while preserving deterministic quorum validation.
-            </p>
           </div>
           
           <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-            <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+            <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-12 lg:max-w-none lg:grid-cols-2">
               <div className="relative bg-white rounded-2xl p-8 shadow-sm ring-1 ring-gray-200 hover:shadow-lg transition-shadow">
                 <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
                   <svg className="h-5 w-5 flex-none text-blue-600" viewBox="0 0 20 20" fill="currentColor">
@@ -198,12 +196,24 @@ export default function Home() {
               <div className="relative bg-white rounded-2xl p-8 shadow-sm ring-1 ring-gray-200 hover:shadow-lg transition-shadow">
                 <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
                   <svg className="h-5 w-5 flex-none text-purple-600" viewBox="0 0 20 20" fill="currentColor">
-                    <path d="M10 9a3 3 0 100-6 3 3 0 000 6zM6 8a2 2 0 11-4 0 2 2 0 014 0zM1.49 15.326a.78.78 0 01-.358-.442 3 3 0 014.308-3.516 6.484 6.484 0 00-1.905 3.959c-.023.222-.014.442.025.654a4.97 4.97 0 01-2.07-.655zM16.44 15.98a4.97 4.97 0 002.07-.654.78.78 0 00.357-.442 3 3 0 00-4.308-3.517 6.484 6.484 0 011.907 3.96 2.32 2.32 0 01-.026.654zM18 8a2 2 0 11-4 0 2 2 0 014 0zM5.304 16.19a.844.844 0 01-.277-.71 5 5 0 019.947 0 .843.843 0 01-.277.71A6.975 6.975 0 0110 18a6.974 6.974 0 01-4.696-1.81z" />
+                    <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
-                  Efficient Redundant MPC
+                  Threshold MPC Signing
                 </dt>
                 <dd className="mt-4 text-base leading-7 text-gray-600">
-                  Parallel execution with majority voting ensures resilient, verifiable results.
+                  Conducted by an attestation-gated mesh of TEEs without human intervention.
+                </dd>
+              </div>
+              
+              <div className="relative bg-white rounded-2xl p-8 shadow-sm ring-1 ring-gray-200 hover:shadow-lg transition-shadow">
+                <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
+                  <svg className="h-5 w-5 flex-none text-orange-600" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M10 9a3 3 0 100-6 3 3 0 000 6zM6 8a2 2 0 11-4 0 2 2 0 014 0zM1.49 15.326a.78.78 0 01-.358-.442 3 3 0 014.308-3.516 6.484 6.484 0 00-1.905 3.959c-.023.222-.014.442.025.654a4.97 4.97 0 01-2.07-.655zM16.44 15.98a4.97 4.97 0 002.07-.654.78.78 0 00.357-.442 3 3 0 00-4.308-3.517 6.484 6.484 0 011.907 3.96 2.32 2.32 0 01-.026.654zM18 8a2 2 0 11-4 0 2 2 0 014 0zM5.304 16.19a.844.844 0 01-.277-.71 5 5 0 019.947 0 .843.843 0 01-.277.71A6.975 6.975 0 0110 18a6.974 6.974 0 01-4.696-1.81z" />
+                  </svg>
+                  Parallel Execution & Majority Voting
+                </dt>
+                <dd className="mt-4 text-base leading-7 text-gray-600">
+                  Multiple program instances with majority voting for tamper resistance.
                 </dd>
               </div>
             </dl>
@@ -228,13 +238,11 @@ export default function Home() {
             <ol className="relative border-l border-gray-200">
               {[
                 { title: "Integrate SDK", desc: "Add TEENet SDK to your application with minimal code changes", color: "blue" },
-                { title: "Generate Key Inside TEENet", desc: "Instant threshold splitting; no full key ever materializes", color: "green" },
-                { title: "Deploy Program Instances", desc: "Bridge/oracle/treasury logic deployed to multiple attested TEEs", color: "purple" },
-                { title: "Parallel Enclave Execution", desc: "Produces candidate outputs / intents", color: "orange" },
-                { title: "Majority Voting", desc: "Configurable quorum selects canonical result", color: "red" },
-                { title: "Threshold MPC Signing", desc: "Shards cooperate; signature emitted—key never reconstructed", color: "indigo" },
-                { title: "Periodic Resharing", desc: "Rotates shard distribution automatically", color: "teal" },
-                { title: "Attestation & Auditing", desc: "Execution metadata exposed for verification & auditing", color: "gray" }
+                { title: "Sign up & Log in & create project in portal", desc: "Set up your project environment through the TEENet portal", color: "green" },
+                { title: "Generate key inside TEENet", desc: "Instant threshold splitting; no full key ever materializes", color: "purple" },
+                { title: "Deploy program instances", desc: "Bridge/oracle/treasury logic deployed to (multiple) attested TEE(s)", color: "orange" },
+                { title: "Configure majority voting on signing hash", desc: "Set up voting parameters if needed for your use case", color: "red" },
+                { title: "Run app(s)", desc: "Your applications are now running with secure threshold key management", color: "indigo" }
               ].map((step, index) => (
                 <li key={index} className="mb-10 ml-6">
                   <span className={`absolute flex items-center justify-center w-8 h-8 bg-${step.color}-100 rounded-full -left-4 ring-4 ring-white`}>
@@ -264,8 +272,8 @@ export default function Home() {
           </div>
           
           <div className="mx-auto mt-16 max-w-7xl">
-            <div className="grid gap-8 lg:grid-cols-2">
-              {/* Private Key Safety */}
+            <div className="grid gap-8 lg:grid-cols-3">
+              {/* Private Key Safety & Lifecycle */}
               <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-50 to-cyan-50 p-8">
                 <div className="relative">
                   <h3 className="text-xl font-bold text-gray-900 mb-4">Private Key Safety & Lifecycle</h3>
@@ -274,31 +282,37 @@ export default function Home() {
                       <svg className="h-6 w-5 flex-none text-blue-600" viewBox="0 0 20 20" fill="currentColor">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
                       </svg>
-                      <span>Born-sharded generation inside attested TEEs</span>
+                      <span>Born-sharded generation inside attested TEEs (never in full memory)</span>
                     </li>
                     <li className="flex gap-x-3">
                       <svg className="h-6 w-5 flex-none text-blue-600" viewBox="0 0 20 20" fill="currentColor">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
                       </svg>
-                      <span>Continuous remote attestation gating</span>
+                      <span>Continuous remote attestation gating participation</span>
                     </li>
                     <li className="flex gap-x-3">
                       <svg className="h-6 w-5 flex-none text-blue-600" viewBox="0 0 20 20" fill="currentColor">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
                       </svg>
-                      <span>Policy-based periodic resharing</span>
+                      <span>Threshold cryptography removes single compromise failure mode</span>
                     </li>
                     <li className="flex gap-x-3">
                       <svg className="h-6 w-5 flex-none text-blue-600" viewBox="0 0 20 20" fill="currentColor">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
                       </svg>
-                      <span>Multi-chain signature scheme support</span>
+                      <span>Periodic resharing (shrinks exposure window)</span>
+                    </li>
+                    <li className="flex gap-x-3">
+                      <svg className="h-6 w-5 flex-none text-blue-600" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
+                      </svg>
+                      <span>Auditable key lifecycle events (gen, resharing, signing rounds)</span>
                     </li>
                   </ul>
                 </div>
               </div>
 
-              {/* Program Security */}
+              {/* Trustless Off-Chain Program Security */}
               <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-green-50 to-emerald-50 p-8">
                 <div className="relative">
                   <h3 className="text-xl font-bold text-gray-900 mb-4">Trustless Off-Chain Program Security</h3>
@@ -307,58 +321,25 @@ export default function Home() {
                       <svg className="h-6 w-5 flex-none text-green-600" viewBox="0 0 20 20" fill="currentColor">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
                       </svg>
-                      <span>Execution restricted to verified TEEs</span>
+                      <span>Execution restricted to verified TEEs (operator / host blind to data)</span>
                     </li>
                     <li className="flex gap-x-3">
                       <svg className="h-6 w-5 flex-none text-green-600" viewBox="0 0 20 20" fill="currentColor">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
                       </svg>
-                      <span>Remote attestation proves enclave integrity</span>
+                      <span>Remote attestation proves TEE nodes' identity & integrity</span>
                     </li>
                     <li className="flex gap-x-3">
                       <svg className="h-6 w-5 flex-none text-green-600" viewBox="0 0 20 20" fill="currentColor">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
                       </svg>
-                      <span>No shell / admin pathway mitigates insider risk</span>
+                      <span>No shell / admin pathway → mitigates insider risk</span>
                     </li>
                     <li className="flex gap-x-3">
                       <svg className="h-6 w-5 flex-none text-green-600" viewBox="0 0 20 20" fill="currentColor">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
                       </svg>
-                      <span>Majority output validation filters tampering</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              {/* MPC & Consensus */}
-              <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-purple-50 to-pink-50 p-8">
-                <div className="relative">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Redundant Secure MPC & Consensus</h3>
-                  <ul className="space-y-3 text-gray-600">
-                    <li className="flex gap-x-3">
-                      <svg className="h-6 w-5 flex-none text-purple-600" viewBox="0 0 20 20" fill="currentColor">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
-                      </svg>
-                      <span>Parallel MPC across enclave set</span>
-                    </li>
-                    <li className="flex gap-x-3">
-                      <svg className="h-6 w-5 flex-none text-purple-600" viewBox="0 0 20 20" fill="currentColor">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
-                      </svg>
-                      <span>Configurable quorum per project risk profile</span>
-                    </li>
-                    <li className="flex gap-x-3">
-                      <svg className="h-6 w-5 flex-none text-purple-600" viewBox="0 0 20 20" fill="currentColor">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
-                      </svg>
-                      <span>Low-latency aggregation pipeline</span>
-                    </li>
-                    <li className="flex gap-x-3">
-                      <svg className="h-6 w-5 flex-none text-purple-600" viewBox="0 0 20 20" fill="currentColor">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
-                      </svg>
-                      <span>Fault isolation & graceful degradation</span>
+                      <span>Majority output validation filters tampering / faults</span>
                     </li>
                   </ul>
                 </div>
@@ -373,25 +354,25 @@ export default function Home() {
                       <svg className="h-6 w-5 flex-none text-orange-600" viewBox="0 0 20 20" fill="currentColor">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
                       </svg>
-                      <span>Lightweight multi-language SDK</span>
+                      <span>Lightweight multi-language SDK (sign(), verifyAttestation())</span>
                     </li>
                     <li className="flex gap-x-3">
                       <svg className="h-6 w-5 flex-none text-orange-600" viewBox="0 0 20 20" fill="currentColor">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
                       </svg>
-                      <span>Portal for key lifecycle management</span>
+                      <span>Portal: key lifecycle, deployment, redundancy config</span>
                     </li>
                     <li className="flex gap-x-3">
                       <svg className="h-6 w-5 flex-none text-orange-600" viewBox="0 0 20 20" fill="currentColor">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
                       </svg>
-                      <span>Real-time node & shard health monitoring</span>
+                      <span>Real-time node + attestation proofs</span>
                     </li>
                     <li className="flex gap-x-3">
                       <svg className="h-6 w-5 flex-none text-orange-600" viewBox="0 0 20 20" fill="currentColor">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
                       </svg>
-                      <span>Opinionated secure defaults</span>
+                      <span>Structured logs & signing round traces</span>
                     </li>
                   </ul>
                 </div>
@@ -482,6 +463,74 @@ export default function Home() {
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-center">
                     <span className="text-green-600 font-semibold">✓ 500+ TPS</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                    Operational Complexity
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-center">
+                    <span className="text-green-600">✓ Simple</span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-center">
+                    <span className="text-orange-600">✗ Complex</span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-center">
+                    <span className="text-red-600">✗ Very Complex</span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-center">
+                    <span className="text-green-600 font-semibold">✓ Minimal</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                    Built-In Redundancy & Voting
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-center">
+                    <span className="text-red-600">✗ None</span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-center">
+                    <span className="text-yellow-600">✓ Limited</span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-center">
+                    <span className="text-orange-600">✓ Partial</span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-center">
+                    <span className="text-green-600 font-semibold">✓ Full</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                    Attestation Transparency
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-center">
+                    <span className="text-red-600">✗ None</span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-center">
+                    <span className="text-red-600">✗ None</span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-center">
+                    <span className="text-red-600">✗ None</span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-center">
+                    <span className="text-green-600 font-semibold">✓ Real-time</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                    Latency Efficiency
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-center">
+                    <span className="text-green-600">✓ Excellent</span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-center">
+                    <span className="text-yellow-600">✓ Good</span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-center">
+                    <span className="text-orange-600">✗ Poor</span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-center">
+                    <span className="text-green-600 font-semibold">✓ Optimized</span>
                   </td>
                 </tr>
               </tbody>
