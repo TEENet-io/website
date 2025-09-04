@@ -65,8 +65,8 @@ export default function Home() {
       {/* Hero Section */}
       <div className="relative bg-white overflow-hidden">
         <div className="pb-80 pt-16 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-40">
-          <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
-            <div className="sm:max-w-lg">
+          <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8 text-center">
+            <div className="mx-auto max-w-4xl">
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
                 Trustless Off-Chain Execution with Built‑In Private Key Security
               </h1>
@@ -75,7 +75,7 @@ export default function Home() {
               </p>
             </div>
             <div className="mt-10">
-              <div className="flex flex-col sm:flex-row gap-3">
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <a
                   href="#"
                   className="inline-flex items-center justify-center rounded-md bg-blue-600 px-6 py-3 text-base font-medium text-white hover:bg-blue-700"
@@ -94,17 +94,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Hero image/illustration area */}
-            <div className="absolute inset-y-0 right-0 w-full max-w-none sm:right-1/2 sm:max-w-3xl lg:right-0 lg:max-w-none">
-              <div className="h-full w-full bg-gradient-to-br from-blue-100 to-indigo-200 opacity-20 sm:h-72 md:h-96 lg:h-full lg:w-full">
-                <div className="flex h-full items-center justify-center">
-                  <div className="text-center">
-                    <div className="mx-auto h-32 w-32 rounded-full bg-blue-500 opacity-60"></div>
-                    <p className="mt-4 text-sm text-blue-600 font-medium">TEE Network Visualization</p>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
