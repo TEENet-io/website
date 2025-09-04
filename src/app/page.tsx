@@ -118,7 +118,7 @@ export default function Home() {
             Off-Chain Signing Stacks Are a Persistent Security Liability
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            The real blocker isn't just centralization—it's unverified, mutable, and easily compromised off-chain execution environments handling critical keys.
+            The real blocker isn&apos;t just centralization—it&apos;s unverified, mutable, and easily compromised off-chain execution environments handling critical keys.
           </p>
         </div>
         
