@@ -79,11 +79,6 @@ export default function Home() {
         <div className="py-24 sm:py-32 lg:pb-40">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center">
-              <div className="mb-8">
-                <span className="inline-flex items-center rounded-full bg-blue-50 px-4 py-1 text-sm font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">
-                  Trustless TEE-Based Off-Chain Compute + Built-in Key Management
-                </span>
-              </div>
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
                 Trustless Off-Chain Execution with{' '}
                 <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
