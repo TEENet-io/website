@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
+import SDKAnimation from '@/components/SDKAnimation';
 
 export default function Home() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -221,6 +222,19 @@ export default function Home() {
             <p className="mt-6 text-lg leading-8 text-gray-600">
               Deploy in minutes with enterprise-grade protection.
             </p>
+          </div>
+
+          {/* SDK Animation Demo */}
+          <div className="mx-auto mt-16 max-w-3xl">
+            <div className="text-center mb-8">
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                SDK Integration Demo
+              </h3>
+              <p className="text-gray-600">
+                See how easy it is to integrate TEENet into your Go application
+              </p>
+            </div>
+            <SDKAnimation />
           </div>
           
           <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24">
