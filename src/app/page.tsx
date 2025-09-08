@@ -78,18 +78,18 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <a
                   href="#"
-                  className="inline-flex items-center justify-center rounded-md bg-blue-600 px-6 py-3 text-base font-medium text-white hover:bg-blue-700"
+                  className="inline-flex items-center justify-center rounded-md bg-blue-600 px-6 py-3 text-base font-medium text-white hover:bg-blue-700 w-40"
                 >
-                  Get Started (SDK + Portal)
+                  Get Started
                   <svg className="ml-2 -mr-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </a>
                 <a
                   href="#"
-                  className="inline-flex items-center justify-center rounded-md border border-gray-300 bg-white px-6 py-3 text-base font-medium text-gray-700 hover:bg-gray-50"
+                  className="inline-flex items-center justify-center rounded-md border border-gray-300 bg-white px-6 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 w-40"
                 >
-                  View Architecture / Read Docs
+                  Docs
                 </a>
               </div>
             </div>
